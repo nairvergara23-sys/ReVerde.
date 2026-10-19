@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef8f0;
+    color: #263b2b;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* PANTALLA DE INICIO */
+
+#pantalla-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f7fcf8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: aparecer 0.7s ease;
+}
+
+/* LOGO */
+
+.logo-reverde {
+    width: 145px;
+    height: 145px;
+    background: #e2f1e5;
+    border-radius: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 22px;
+    box-shadow: 0 12px 30px rgba(46, 125, 50, 0.12);
+}
+
+.simbolo-reciclaje {
+    font-size: 82px;
+    line-height: 1;
+    color: #2e7d32;
+    font-weight: bold;
+    transform: rotate(-8deg);
+    z-index: 2;
+}
+
+.hoja-logo {
+    position: absolute;
+    width: 35px;
+    height: 58px;
+    background: #66bb6a;
+    border-radius: 100% 0 100% 0;
+    right: 28px;
+    top: 25px;
+    transform: rotate(38deg);
+    z-index: 1;
+}
+
+/* TEXTO DE INICIO */
+
+#pantalla-inicio h1 {
+    color: #246b2b;
+    font-size: 52px;
+    margin: 5px 0;
+}
+
+#pantalla-inicio p {
+    color: #58735d;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MENÚ */
+
+nav {
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    border-bottom: 1px solid #dcebdd;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    color: #286b31;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 17px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e8f5e9;
+    transform: translateY(-1px);
+}
+
+/* CONTENIDO */
+
+.bienvenida {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 45px 35px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(47, 95, 54, 0.08);
+}
+
+.bienvenida h1 {
+    color: #246b2b;
+    font-size: 48px;
+    margin: 5px 0;
+}
+
+.encabezado-principal {
+    margin-bottom: 20px;
+}
+
+.mini-logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2f1e5;
+    border-radius: 20px;
+    color: #2e7d32;
+    font-size: 38px;
+}
+
+.subtitulo {
+    color: #4d7954;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.descripcion {
+    max-width: 620px;
+    margin: 25px auto;
+    color: #526357;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* BOTONES */
+
+.menu-app {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 520px;
+    margin: 35px auto 45px;
+}
+
+.menu-app .boton {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+    text-decoration: none;
+    padding: 18px 22px;
+    border-radius: 16px;
+    transition: 0.25s;
+}
+
+.boton-principal {
+    background: #2e7d32;
+    color: white;
+}
+
+.boton-secundario {
+    background: #f0f8f1;
+    color: #2e7d32;
+    border: 2px solid #c8e6c9;
+}
+
+.menu-app .boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+}
+
+.icono-boton {
+    font-size: 32px;
+    min-width: 42px;
+    text-align: center;
+}
+
+.menu-app strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.menu-app small {
+    display: block;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* COMO FUNCIONA */
+
+.como-funciona {
+    margin-top: 20px;
+}
+
+.como-funciona h2 {
+    color: #2e7d32;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.paso {
+    background: #f7fbf7;
+    border: 1px solid #dcebdd;
+    border-radius: 17px;
+    padding: 22px 17px;
+    text-align: center;
+}
+
+.numero-paso {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2e7d32;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.paso h3 {
+    color: #2e7d32;
+    margin: 8px 0;
+}
+
+.paso p {
+    color: #59655b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* MENSAJE */
+
+.mensaje-ambiental {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+    background: #eaf6ec;
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 35px;
+}
+
+.mensaje-icono {
+    font-size: 38px;
+}
+
+.mensaje-ambiental h2 {
+    color: #2e7d32;
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+
+.mensaje-ambiental p {
+    color: #526357;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* TARJETAS DE RECICLAJE */
+
+.tarjetas-reciclaje {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.tarjeta-material {
+    background: #f7fbf7;
+    border: 2px solid #d2e8d4;
+    border-radius: 18px;
+    padding: 25px 20px;
+    transition: 0.25s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tarjeta-material:hover {
+    transform: translateY(-5px);
+    border-color: #66bb6a;
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.1);
+}
+
+.icono-material {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-material h2 {
+    color: #2e7d32;
+    margin: 10px 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+    nav {
+        gap: 3px;
+        padding: 12px 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .bienvenida {
+        margin: 25px 12px;
+        padding: 30px 18px;
+        border-radius: 20px;
+    }
+
+    .bienvenida h1 {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 17px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .mensaje-ambiental {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .tarjetas-reciclaje {
+        grid-template-columns: 1fr;
+    }
+
+    #pantalla-inicio h1 {
+        font-size: 45px;
+    }
+
+    .logo-reverde {
+        width: 125px;
+        height: 125px;
+    }
+}
